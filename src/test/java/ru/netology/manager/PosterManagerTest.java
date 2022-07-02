@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 public class PosterManagerTest {
 
     @Test
-    public void shouldAddMovie() {
-        PosterManager manager  = new PosterManager(2);
+    public void shouldAddMovieAndFindAll() {
+        PosterManager manager  = new PosterManager();
 
         manager.addMove("Film1");
         manager.addMove("Film2");
@@ -19,6 +19,7 @@ public class PosterManagerTest {
         assertArrayEquals(expected, actual);
 
     }
+
 
     @Test
     public void shouldFindLastFive() {
