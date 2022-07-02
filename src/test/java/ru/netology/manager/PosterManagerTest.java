@@ -38,6 +38,21 @@ public class PosterManagerTest {
     }
 
     @Test
+    public void shouldFindLastFiveIfContainedThree() {
+        PosterManager manager = new PosterManager(5);
+        manager.addMove("Film1");
+        manager.addMove("Film2");
+        manager.addMove("Film3");
+
+
+        String[] expected = {"Film3", "Film2", "Film1"};
+        String[] actual = manager.findLast();
+
+        assertArrayEquals(expected,actual);
+
+    }
+
+    @Test
     public void shouldFindLastTen() {
         PosterManager manager = new PosterManager();
         manager.addMove("Film1");
